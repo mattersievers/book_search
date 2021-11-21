@@ -65,11 +65,10 @@ const resolvers = {
             throw new AuthenticationError('You need to be logged in!');
         },    
         removeBook: async(parent, args, context) => {
-            console.log(args.bookId);
             if(context.user) {
                 const updatedUser = await User.findByIdAndUpdate(
                     { _id: context.user._id },
-                    { savedBooks: savedBooks.filter(book => book.bookId !== args.bookId ) },
+                    { $pull: {savedBooks: { bookId: args.bookId } } },
                     { new:true }
                 );
                 return updatedUser;
