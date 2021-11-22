@@ -15,14 +15,11 @@
   ## Description
   This website is a full stack MERN website that  acts as a digital library where users can create accounts to search through Google books and add and remove them from a saved list.  
   ![](./client/public/homepage.png)  
-  
+
   [Deployed Site](https://dry-headland-92689.herokuapp.com/)
 
   ## Install
   Download the files and install the node package dependencies with "npm install". Use the command "npm run develop" to run the website in development mode.
-  
-  ## Use
-  n/a
   
   ## License
   No license.
